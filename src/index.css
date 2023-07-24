@@ -1,13 +1,51 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700;900&display=swap");
+
+:root {
+	--darkest: #1f1f38;
+	--darker: #2c2c6c;
+	--medium: #4db5ff;
+	--light: hsl(205, 100%, 85%);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+	font-family: "Poppins", sans-serif;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.custom-tooltip {
+	--bs-tooltip-bg: var(--bs-secondary);
+}
+
+.my-badge {
+	background-color: var(--medium);
+	color: var(--darkest) !important;
+
+	border-radius: 15px;
+	margin-right: 5px;
+	margin-top: 5px;
+}
+
+.project-img-and-container {
+	height: 450px !important;
+}
+
+@media screen and (width > 900px) {
+	.project-img-and-container {
+		height: 350px !important;
+	}
+}
+
+@media screen and (width < 600px) {
+	.skill-card {
+		margin: 7px 60px !important;
+	}
+}
+
+.active-btn {
+	background-color: #ccc !important;
+}
+
+.active-btn:hover {
+	background-color: var(--medium) !important;
 }

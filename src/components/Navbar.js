@@ -3,7 +3,7 @@ import photo from "../assets/avatarIcon.png";
 
 export default function Navbar() {
 	return (
-		<nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+		<nav style={{ backgroundColor: "var(--medium)" }} className="navbar navbar-expand-lg fixed-top navbar-light  ">
 			<div className="container-fluid">
 				<a className="navbar-brand" href="#">
 					<img
