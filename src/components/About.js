@@ -7,12 +7,8 @@ import database from "../assets/database.svg";
 import devOps from "../assets/devOps.svg";
 import cloud from "../assets/cloud.svg";
 import others from "../assets/others.svg";
-import { Tooltip } from "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 export default function About() {
-	const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-	const tooltipList = [...tooltipTriggerList].map((tooltipTriggerEl) => new Tooltip(tooltipTriggerEl));
-
 	return (
 		<section id="about" style={{ paddingTop: "6rem", paddingBottom: "6rem", backgroundColor: "#ddd" }}>
 			<div className="container-lg">

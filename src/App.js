@@ -8,8 +8,15 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import { Modal } from "bootstrap/dist/js/bootstrap.bundle.min.js";
 import MyModal from "./components/MyModal";
+import { Tooltip } from "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 function App() {
+	document.addEventListener("DOMContentLoaded", function () {
+		// Select all UI DOM elements
+		const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+		const tooltipList = [...tooltipTriggerList].map((tooltipTriggerEl) => new Tooltip(tooltipTriggerEl));
+	});
+
 	const openModal = () => {
 		const myModalAlternative = new Modal("#exampleModal", {});
 		myModalAlternative.show();
