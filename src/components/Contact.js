@@ -50,7 +50,7 @@ const Contact = ({ showModal }) => {
 								<a
 									href="mailto:lekeakajoe@gmail.com"
 									target="_blank"
-									rel="noopener"
+									rel="noreferrer"
 									style={{ borderRadius: "10px" }}
 									class="btn btn-outline-secondary btn-sm contact-btn m-0   me-lg-5  mt-2 text-white"
 								>
@@ -66,7 +66,7 @@ const Contact = ({ showModal }) => {
 							<a
 								href="https://www.linkedin.com/in/mewoabi-lekeaka-joe-8a22801ba/"
 								target="_blank"
-								rel="noopener"
+								rel="noreferrer"
 								style={{ borderRadius: "10px" }}
 								class="btn d-block btn-outline-secondary btn-sm contact-btn m-0 ms-3 d-flex justify-content-center  flex-column align-items-center text-white"
 							>

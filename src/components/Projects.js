@@ -173,7 +173,7 @@ const Projects = () => {
 									<a
 										href="https://github.com/Mewoabi-Joe/Go-groups-task-1-angular"
 										target="_blank"
-										rel="noopener"
+										rel="noreferrer"
 										class="btn btn-light  active-btn  "
 									>
 										Frontend code
@@ -223,7 +223,7 @@ const Projects = () => {
 									<a
 										href="https://github.com/Mewoabi-Joe/Go-groups-task-3-microservices-in-communication-for-warehouse-management"
 										target="_blank"
-										rel="noopener"
+										rel="noreferrer"
 										class="btn btn-light  active-btn  "
 									>
 										Backend code
@@ -268,7 +268,7 @@ const Projects = () => {
 									<a
 										href="https://github.com/Mewoabi-Joe/Full-stack-NodeJs-Angular-SMS-APP/tree/main/Angular-frontend"
 										target="_blank"
-										rel="noopener"
+										rel="noreferrer"
 										class="btn btn-light  active-btn btn-sm "
 									>
 										Frontend code
@@ -276,7 +276,7 @@ const Projects = () => {
 									<a
 										href=" https://github.com/Mewoabi-Joe/Full-stack-NodeJs-Angular-SMS-APP/tree/main/Node-backend"
 										target="_blank"
-										rel="noopener"
+										rel="noreferrer"
 										class="btn btn-light  active-btn btn-sm ms-2"
 									>
 										Backend code
@@ -323,13 +323,13 @@ const Projects = () => {
 											and users can deposit, borrow, save, contribute money aswell as ask for financial help.
 										</small>
 									</div>
-									<button target="_blank" rel="noopener" class="btn btn-outline-light btn-sm " disabled>
+									<button target="_blank" rel="noreferrer" class="btn btn-outline-light btn-sm " disabled>
 										Frontend code
 									</button>
 									<button
 										href=" https://www.loyensloeff.com/contentassets/7ca5076ac555499c84ceedf4553233de/money-2.jpg?width=580&height=387"
 										target="_blank"
-										rel="noopener"
+										rel="noreferrer"
 										class="btn btn-outline-light btn-sm ms-2"
 										disabled
 									>
@@ -388,7 +388,7 @@ const Projects = () => {
 									<a
 										href="https://github.com/Mewoabi-Joe/Flutter_catalog_of_services"
 										target="_blank"
-										rel="noopener"
+										rel="noreferrer"
 										class="btn btn-light  active-btn btn-sm "
 									>
 										Frontend code
@@ -396,7 +396,7 @@ const Projects = () => {
 									<a
 										href="https://github.com/Mewoabi-Joe/Spring-boot-backend-status_and_catalog"
 										target="_blank"
-										rel="noopener"
+										rel="noreferrer"
 										class="btn btn-light  active-btn btn-sm ms-2 "
 									>
 										Backend code
@@ -439,7 +439,7 @@ const Projects = () => {
 									<a
 										href="https://github.com/Mewoabi-Joe/My-Portfolio-site"
 										target="_blank"
-										rel="noopener"
+										rel="noreferrer"
 										class="btn btn-light  active-btn  "
 									>
 										Frontend code
