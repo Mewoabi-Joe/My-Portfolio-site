@@ -1,12 +1,7 @@
 import React from "react";
 import frontend from "../assets/frontend.svg";
 
-import { Tooltip } from "bootstrap/dist/js/bootstrap.bundle.min.js";
-
 const Projects = () => {
-	const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-	const tooltipList = [...tooltipTriggerList].map((tooltipTriggerEl) => new Tooltip(tooltipTriggerEl));
-
 	return (
 		<section id="projects" style={{ paddingTop: "6rem", paddingBottom: "6rem", backgroundColor: "var(--darkest)" }}>
 			<div className="container-lg">

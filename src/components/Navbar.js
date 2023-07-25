@@ -3,7 +3,11 @@ import photo from "../assets/avatarIcon.png";
 
 export default function Navbar() {
 	return (
-		<nav style={{ backgroundColor: "var(--medium)" }} className="navbar navbar-expand-lg fixed-top navbar-light  ">
+		<nav
+			id="my-navbar"
+			style={{ backgroundColor: "var(--medium)" }}
+			className="navbar navbar-expand-lg fixed-top navbar-light  "
+		>
 			<div className="container-fluid">
 				<a className="navbar-brand" href="#">
 					<img
@@ -27,7 +31,7 @@ export default function Navbar() {
 				</button>
 				<div className="collapse navbar-collapse " id="navbarNavAltMarkup">
 					<div className="navbar-nav ms-auto">
-						<a className="nav-link active" aria-current="page" href="#home">
+						<a className="nav-link  " href="#home">
 							Home
 						</a>
 						<a className="nav-link" href="#about">
