@@ -9,7 +9,7 @@ export default function Navbar() {
 			className="navbar navbar-expand-lg fixed-top navbar-light  "
 		>
 			<div className="container-fluid">
-				<a className="navbar-brand" href="#">
+				<a className="navbar-brand" href="#home">
 					<img
 						src={photo}
 						alt=""
