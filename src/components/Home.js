@@ -53,7 +53,7 @@ export default function Home() {
 						</div>
 					</div>
 					<div className=" col-4 col-md-5 col-lg-6    text-center">
-						<img src={photo} alt="My photo" className="img-fluid" />
+						<img src={photo} alt="Mewoabi Joe" className="img-fluid" />
 					</div>
 				</div>
 			</div>

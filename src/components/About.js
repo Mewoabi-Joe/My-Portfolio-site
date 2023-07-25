@@ -1,6 +1,5 @@
 import React from "react";
 import mobile from "../assets/mobile.svg";
-import desktop from "../assets/desktop.svg";
 import frontend from "../assets/frontend.svg";
 import backend from "../assets/backend.svg";
 import database from "../assets/database.svg";

@@ -2,7 +2,6 @@ import React from "react";
 import "./contact.css";
 import { MdOutlineEmail } from "react-icons/md";
 import { AiOutlineLinkedin } from "react-icons/ai";
-import { BsWhatsapp } from "react-icons/bs";
 import { BsTelephone } from "react-icons/bs";
 import { GoLocation } from "react-icons/go";
 import { useRef } from "react";

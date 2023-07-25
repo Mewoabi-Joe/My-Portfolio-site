@@ -1,5 +1,4 @@
 import React from "react";
-import frontend from "../assets/frontend.svg";
 
 const Projects = () => {
 	return (
