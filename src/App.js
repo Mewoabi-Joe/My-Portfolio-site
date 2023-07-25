@@ -32,7 +32,14 @@ function App() {
 	};
 
 	return (
-		<div className="App" data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+		<div
+			className="scrollspy-example"
+			data-bs-spy="scroll"
+			data-bs-target="#my-navbar"
+			data-bs-smooth-scroll="true"
+			data-bs-offset="50"
+			tabindex="0"
+		>
 			<MyModal isSuccess={isSuccess} message={message} />
 			<Navbar />
 			<Home />
