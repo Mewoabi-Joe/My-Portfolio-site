@@ -61,3 +61,16 @@
 .active {
 	color: hsl(240, 42%, 45%) !important;
 }
+
+#projects .link:hover {
+	background-color: var(--medium);
+	color: black;
+}
+#projects .link.inactive {
+	background-color: transparent;
+	color: white;
+}
+
+#projects .link.inactive:hover {
+	cursor: not-allowed;
+}
