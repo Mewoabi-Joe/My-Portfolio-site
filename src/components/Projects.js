@@ -212,7 +212,7 @@ const Projects = () => {
 								}
 								tags={["Frontend ", "React ", "Responsive "]}
 								frontend={{
-									githubUrl: "https://github.com/Mewoabi-Joe/My-Portfolio-site",
+									githubUrl: "https://github.com/Mewoabi-Joe/My-Portfolio-site/tree/dev",
 								}}
 							/>
 						</div>
