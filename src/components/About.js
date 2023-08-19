@@ -6,6 +6,8 @@ import database from "../assets/database.svg";
 import devOps from "../assets/devOps.svg";
 import cloud from "../assets/cloud.svg";
 import others from "../assets/others.svg";
+import soft from "../assets/soft.svg";
+import SkillCard from "./SkillCard";
 
 export default function About() {
 	return (
@@ -15,7 +17,7 @@ export default function About() {
 					<h2 className="display-4" style={{ fontWeight: 900 }}>
 						ABOUT ME
 					</h2>
-					<small>I love software development</small>
+					<small>Versatile Developer Ready to Excel in Frontend, Backend, or Full Stack Endeavors 🚀</small>
 				</div>
 
 				<div className="row justify-content-center">
@@ -76,8 +78,9 @@ export default function About() {
 											</h4>
 											<p>
 												Web developement basics <span className="fw-bold">HTML, CSS</span> and{" "}
-												<span className="fw-bold">JavaScript</span> was fun learning from the HTML, CSS and JavaScript
-												Head First books by O'Reilly Media .
+												<span className="fw-bold">JavaScript</span> were fun learning from the HTML, CSS and JavaScript
+												Head First books by O'Reilly Media . It was easier for me to pick up on these coming from Java
+												which is a tougher language.
 											</p>
 										</div>
 										<div className="d-flex">
@@ -85,7 +88,7 @@ export default function About() {
 												<span class="material-symbols-outlined">network_intelligence_history</span>
 											</h4>
 											<p>
-												Then I moved to learn frontend web developement frameworks:{" "}
+												I then moved to learn frontend web developement frameworks:{" "}
 												<span className="fw-bold">React</span> and <span className="fw-bold">Angular.</span> React was
 												much fun and easy to develop with compared to angular because it did'nt force me to use
 												typescript and did'nt have as many new concepts to master like angular did, it was more
@@ -155,13 +158,25 @@ export default function About() {
 												<span class="material-symbols-outlined">network_intelligence_history</span>
 											</h4>
 											<p>
-												Things are only getting more and more interesting as <span className="fw-bold">AI</span> comes
-												in to make us more efficient. I've also be working of recent with some DevOps and Cloud
-												technologies. <span className="fw-bold"> Docker</span> being my main way to containarise apps,
-												as usual <span className="fw-bold">Git&Github</span> for SCM, some work with Github actions. For
-												cloud provides, <span className="fw-bold">GCP</span> is the one I've been working with of
-												recent, and have used its <span className="fw-bold">Cloud build</span>,{" "}
-												<span className="fw-bold">GCR</span> and <span className="fw-bold">Cloud Run</span> services
+												As I worked on side projects, and projects on which I had to collaborate in on the same code
+												base with other developers, <span className="fw-bold">Docker</span> has become more second
+												nature for containarising apps. Also I use
+												<span className="fw-bold">Git&Github</span> on a daily bases for source control.
+											</p>
+										</div>
+										<div className="d-flex">
+											<h4 className="pe-3">
+												<span class="material-symbols-outlined">network_intelligence_history</span>
+											</h4>
+											<p>
+												In my recent position as a software developer intern at LimitLess Tech, once more I had to
+												exercise my muscle of adaption by getting versed with the problem at hand, then collaborating
+												with other developers as the leading dev for the web version of their cryptocurrency exchange
+												web client. In addition to working on the frontend of their cryptocurrency exchange web
+												application, I had take charge of setting up and managing their DevOps and Cloud infrastructure
+												with <span className="fw-bold">Google Cloud Platform</span>. Working with the
+												<span className="fw-bold">Cloud build</span>, <span className="fw-bold">GCR</span> and{" "}
+												<span className="fw-bold">Cloud Run</span> GCP services.
 											</p>
 										</div>
 									</div>
@@ -205,209 +220,75 @@ export default function About() {
 				<div className="row justify-content-center" style={{ paddingLeft: 12, paddingRight: 12 }}>
 					<div className="col-md-12 col-lg-11 ">
 						<div className=" row row-cols-1 row-cols-sm-2 align-items-start justify-content-center  ">
-							<div className="skill-card card border border-secondary" style={{ borderRadius: "1.5rem" }}>
-								<img
-									src={frontend}
-									className="card-img-top img-fluid border border-light"
-									alt=""
-									style={{ borderRadius: "1.5rem", height: "200px", width: "500px" }}
-								/>
-								<div className="card-body">
-									<h5 className="card-title text-center fw-bold">Front-end</h5>
-								</div>
-								<ul className="list-group list-group-flush">
-									<li
-										className="list-group-item d-flex justify-content-around"
-										style={{ borderBottomLeftRadius: "1.5rem", borderBottomRightRadius: "1.5rem" }}
-									>
-										<span>HTML</span>
-										<span>CSS</span>
-										<span>JavaScript</span>
-									</li>
-									<li
-										className="list-group-item d-flex justify-content-around"
-										style={{ borderBottomLeftRadius: "1.5rem", borderBottomRightRadius: "1.5rem" }}
-									>
-										<span>React</span>
-										<span>Angular</span>
-									</li>
-								</ul>
-							</div>
-
-							<div className="skill-card card border border-secondary" style={{ borderRadius: "1.5rem" }}>
-								<img
-									src={backend}
-									className="card-img-top img-fluid border border-light"
-									alt=""
-									style={{ borderRadius: "1.5rem", height: "200px", width: "500px" }}
-								/>
-								<div className="card-body">
-									<h5 className="card-title text-center fw-bold">Back-end</h5>
-								</div>
-								<ul className="list-group list-group-flush">
-									<li
-										className="list-group-item d-flex justify-content-center"
-										style={{ borderBottomLeftRadius: "1.5rem", borderBottomRightRadius: "1.5rem" }}
-									>
-										<span>Node js</span>
-									</li>
-									<li
-										className="list-group-item d-flex justify-content-center"
-										style={{ borderBottomLeftRadius: "1.5rem", borderBottomRightRadius: "1.5rem" }}
-									>
-										<span>Spring boot</span>
-									</li>
-								</ul>
-							</div>
-							<div className="skill-card card border border-secondary" style={{ borderRadius: "1.5rem" }}>
-								<img
-									src={database}
-									className="card-img-top img-fluid border border-light"
-									alt=""
-									style={{ borderRadius: "1.5rem", height: "200px", width: "500px" }}
-								/>
-								<div className="card-body">
-									<h5 className="card-title text-center fw-bold">Databases</h5>
-								</div>
-								<ul className="list-group list-group-flush">
-									<li
-										className="list-group-item d-flex justify-content-between"
-										style={{ borderBottomLeftRadius: "1.5rem", borderBottomRightRadius: "1.5rem" }}
-									>
-										<span>Mongo DB</span>
-										<span>MySQL</span>
-									</li>
-									<li
-										className="list-group-item d-flex justify-content-center"
-										style={{ borderBottomLeftRadius: "1.5rem", borderBottomRightRadius: "1.5rem" }}
-									>
-										<span>Cassandra</span>
-									</li>
-								</ul>
-							</div>
-
-							<div className="skill-card card border border-secondary" style={{ borderRadius: "1.5rem" }}>
-								<img
-									src={mobile}
-									className="card-img-top img-fluid border border-light"
-									alt=""
-									style={{ borderRadius: "1.5rem", height: "200px", width: "500px" }}
-								/>
-								<div className="card-body">
-									<h5 className="card-title text-center fw-bold">Mobile</h5>
-								</div>
-								<ul className="list-group list-group-flush">
-									<li
-										className="list-group-item d-flex justify-content-center"
-										style={{ borderBottomLeftRadius: "1.5rem", borderBottomRightRadius: "1.5rem" }}
-									>
-										<span>Flutter</span>
-									</li>
-									<li
-										className="list-group-item d-flex justify-content-center"
-										style={{ borderBottomLeftRadius: "1.5rem", borderBottomRightRadius: "1.5rem" }}
-									>
-										<span>React native</span>
-									</li>
-								</ul>
-							</div>
-							<div className="skill-card card border border-secondary" style={{ borderRadius: "1.5rem" }}>
-								<img
-									src={devOps}
-									className="card-img-top img-fluid border border-light"
-									alt=""
-									style={{ borderRadius: "1.5rem", height: "200px", width: "500px" }}
-								/>
-								<div className="card-body">
-									<h5 className="card-title text-center fw-bold">DevOps</h5>
-								</div>
-								<ul className="list-group list-group-flush">
-									<li
-										className="list-group-item d-flex justify-content-around"
-										style={{ borderBottomLeftRadius: "1.5rem", borderBottomRightRadius: "1.5rem" }}
-									>
-										<span>Git</span>
-										<span>Github</span>
-									</li>
-
-									<li
-										className="list-group-item d-flex justify-content-around"
-										style={{ borderBottomLeftRadius: "1.5rem", borderBottomRightRadius: "1.5rem" }}
-									>
-										<span>Docker</span>
-										<span>Github actions</span>
-									</li>
-								</ul>
-							</div>
-							<div className="skill-card card border border-secondary" style={{ borderRadius: "1.5rem" }}>
-								<img
-									src={cloud}
-									className="card-img-top img-fluid border border-light"
-									alt=""
-									style={{ borderRadius: "1.5rem", height: "200px", width: "500px" }}
-								/>
-								<div className="card-body">
-									<h5 className="card-title text-center fw-bold">Cloud</h5>
-								</div>
-								<ul className="list-group list-group-flush">
-									<li
-										className="list-group-item d-flex justify-content-center"
-										style={{ borderBottomLeftRadius: "1.5rem", borderBottomRightRadius: "1.5rem" }}
-									>
-										<span>Google cloud platform</span>
-									</li>
-
-									<li
-										className="list-group-item d-flex justify-content-around"
-										style={{ borderBottomLeftRadius: "1.5rem", borderBottomRightRadius: "1.5rem" }}
-									>
-										<span>GCR</span>
-										<span>Cloud build</span>
-										<span>Cloud run</span>
-									</li>
-								</ul>
-							</div>
-							<div className="skill-card card border border-secondary" style={{ borderRadius: "1.5rem" }}>
-								<img
-									src={others}
-									className="card-img-top img-fluid border border-light"
-									alt=""
-									style={{ borderRadius: "1.5rem", height: "200px", width: "500px" }}
-								/>
-								<div className="card-body">
-									<h5 className="card-title text-center fw-bold">More</h5>
-								</div>
-								<ul className="list-group list-group-flush">
-									<li
-										className="list-group-item d-flex justify-content-center"
-										style={{ borderBottomLeftRadius: "1.5rem", borderBottomRightRadius: "1.5rem" }}
-									>
-										<span>Jira</span>
-										<small style={{ fontSize: "0.7rem" }} className="d-flex align-items-center f  ms-1">
-											: Project management & collaboration
-										</small>
-									</li>
-
-									<li
-										className="list-group-item d-flex justify-content-center"
-										style={{ borderBottomLeftRadius: "1.5rem", borderBottomRightRadius: "1.5rem" }}
-									>
-										<span>Cypress</span>
-										<small style={{ fontSize: "0.7rem" }} className="d-flex align-items-center ms-1">
-											: Application testing
-										</small>
-									</li>
-									<li
-										className="list-group-item d-flex justify-content-center"
-										style={{ borderBottomLeftRadius: "1.5rem", borderBottomRightRadius: "1.5rem" }}
-									>
-										<span>Firebase </span>
-										<small style={{ fontSize: "0.7rem" }} className="d-flex align-items-center ms-1">
-											: Backend as a service
-										</small>
-									</li>
-								</ul>
-							</div>
+							<SkillCard
+								image={frontend}
+								category={"Front-end"}
+								row1Items={["HTML", "CSS", "JavaScript"]}
+								row1Spacing={"around"}
+								row2Items={["React", "Angular"]}
+								row2Spacing={"around"}
+							/>
+							<SkillCard
+								image={backend}
+								category={"Back-end"}
+								row1Items={["Node js"]}
+								row1Spacing={"center"}
+								row2Items={["Springboot"]}
+								row2Spacing={"center"}
+							/>
+							<SkillCard
+								image={database}
+								category={"Databases"}
+								row1Items={["Mongo DB", "MySQL"]}
+								row1Spacing={"between"}
+								row2Items={["Cassandra"]}
+								row2Spacing={"center"}
+							/>
+							<SkillCard
+								image={mobile}
+								category={"Mobile"}
+								row1Items={["Flutter"]}
+								row1Spacing={"center"}
+								row2Items={["React Native"]}
+								row2Spacing={"center"}
+							/>
+							<SkillCard
+								image={devOps}
+								category={"DevOps"}
+								row1Items={["Git", "GitHub"]}
+								row1Spacing={"around"}
+								row2Items={["Docker", "GitHub actions"]}
+								row2Spacing={"around"}
+							/>
+							<SkillCard
+								image={cloud}
+								category={"Cloud"}
+								row1Items={["Google cloud platform"]}
+								row1Spacing={"center"}
+								row2Items={["GCR", "Cloud build", "Cloud run"]}
+								row2Spacing={"around"}
+							/>
+							<SkillCard
+								image={others}
+								category={"More"}
+								theMoreCard={true}
+								rowsOfMoreCard={[
+									{ item: "Jira", description: "Project management & collaboration" },
+									{ item: "Cypress", description: "Application testing" },
+									{ item: "Firebase", description: "Backend as a service" },
+								]}
+							/>
+							<SkillCard
+								image={soft}
+								category={"More than technical"}
+								row1Items={["Effective Communication", "Problem Solving"]}
+								row1Spacing={"between"}
+								row2Items={["Team Collaboration", "Adaptability"]}
+								row2Spacing={"between"}
+								row3Items={["Continuous Learning", "Time Management"]}
+								row3Spacing={"between"}
+							/>
+							{/* <SkillCard emptyCard={true} /> */}
 						</div>
 					</div>
 				</div>
