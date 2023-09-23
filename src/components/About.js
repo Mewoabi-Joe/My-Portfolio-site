@@ -1,5 +1,6 @@
 import React from "react";
 import mobile from "../assets/mobile.svg";
+import mobileDesktop from "../assets/mobile-desktop.svg";
 import frontend from "../assets/frontend.svg";
 import backend from "../assets/backend.svg";
 import database from "../assets/database.svg";
@@ -17,10 +18,10 @@ export default function About() {
 					<h2 className="display-4" style={{ fontWeight: 900 }}>
 						ABOUT ME
 					</h2>
-					<small>Versatile Developer Ready to Excel in Frontend, Backend, or Full Stack Endeavors 🚀</small>
+					<small>Versatile software engineer excelling in Frontend, Backend, or Full Stack Endeavors 🚀</small>
 				</div>
 
-				<div className="row justify-content-center">
+				{/* <div className="row justify-content-center">
 					<div className="col-md-12 col-lg-11">
 						<div className="accordion" id="accordionPanelsStayOpenExample">
 							<div className="accordion-item" style={{ borderRadius: "2rem" }}>
@@ -36,14 +37,6 @@ export default function About() {
 									>
 										<h4 style={{ fontWeight: 700 }}>
 											My story
-											{/* <span
-												class="material-symbols-outlined"
-												data-bs-toggle="tooltip"
-												data-bs-placement="top"
-												data-bs-title="This is just my dev"
-											>
-												lightbulb
-											</span> */}
 										</h4>
 									</button>
 								</h2>
@@ -79,8 +72,8 @@ export default function About() {
 											<p>
 												Web developement basics <span className="fw-bold">HTML, CSS</span> and{" "}
 												<span className="fw-bold">JavaScript</span> were fun learning from the HTML, CSS and JavaScript
-												Head First books by O'Reilly Media . It was easier for me to pick up on these coming from Java
-												which is a tougher language.
+												Head First books by O'Reilly Media . It was easier for me to pick up on th coming from Java
+												which was a tougher language.
 											</p>
 										</div>
 										<div className="d-flex">
@@ -184,7 +177,7 @@ export default function About() {
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> */}
 				{/* <span
 					class="material-symbols-outlined"
 					data-bs-toggle="tooltip"
@@ -221,38 +214,43 @@ export default function About() {
 					<div className="col-md-12 col-lg-11 ">
 						<div className=" row row-cols-1 row-cols-sm-2 align-items-start justify-content-center  ">
 							<SkillCard
+								image={others}
+								category={"Base skills"}
+								row1Items={["Java", "JavaScript", "TypeScript", "Dart"]}
+								row1Spacing={"between"}
+								row2Items={["HTML", "CSS", "SASS", "Git", "GitHub", "Cypress"]}
+								row2Spacing={"between"}
+								row3Items={["Docker", "Kubernetes", "GCP", "Firebase"]}
+								row3Spacing={"between"}
+							/>
+							<SkillCard
 								image={frontend}
-								category={"Front-end"}
-								row1Items={["HTML", "CSS", "JavaScript"]}
-								row1Spacing={"around"}
-								row2Items={["React", "Angular"]}
-								row2Spacing={"around"}
+								category={"Web frontend"}
+								row1Items={["React", "Next.js", "Styled-components", "Material UI"]}
+								row1Spacing={"between"}
+								row2Items={["space"]}
+								row2Spacing={"center"}
+								row3Items={["Angular", "Angular material", "Bootstrap", "Tailwind CSS"]}
+								row3Spacing={"between"}
 							/>
 							<SkillCard
 								image={backend}
-								category={"Back-end"}
-								row1Items={["Node js"]}
-								row1Spacing={"center"}
-								row2Items={["Springboot"]}
-								row2Spacing={"center"}
-							/>
-							<SkillCard
-								image={database}
-								category={"Databases"}
-								row1Items={["Mongo DB", "MySQL"]}
+								category={"Backend and databases"}
+								row1Items={["Node.js", "Express.js", "NestJS", "Spring boot"]}
 								row1Spacing={"between"}
-								row2Items={["Cassandra"]}
-								row2Spacing={"center"}
+								row2Items={["MySQL", "MongoDB", "PostgreSQL", "Cassandra"]}
+								row2Spacing={"between"}
 							/>
 							<SkillCard
-								image={mobile}
-								category={"Mobile"}
-								row1Items={["Flutter"]}
-								row1Spacing={"center"}
-								row2Items={["React Native"]}
-								row2Spacing={"center"}
+								image={mobileDesktop}
+								category={"Mobile and Desktop app development"}
+								row1Items={["React Native", "Flutter"]}
+								row1Spacing={"around"}
+								row2Items={["Electron.js", "JavaFX"]}
+								row2Spacing={"around"}
 							/>
-							<SkillCard
+
+							{/* <SkillCard
 								image={devOps}
 								category={"DevOps"}
 								row1Items={["Git", "GitHub"]}
@@ -287,7 +285,7 @@ export default function About() {
 								row2Spacing={"between"}
 								row3Items={["Continuous Learning", "Time Management"]}
 								row3Spacing={"between"}
-							/>
+							/> */}
 							{/* <SkillCard emptyCard={true} /> */}
 						</div>
 					</div>
