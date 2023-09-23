@@ -9,15 +9,17 @@ const Projects = () => {
 					<h2 className="display-4" style={{ fontWeight: 900, color: "var(--medium)" }}>
 						MY PROJECTS
 					</h2>
-					<small style={{ color: "#bbb" }}>Some projects I've worked on</small>
-					<span
+					<small style={{ color: "#bbb" }}>
+						Some projects I've worked on in approximately decreasing order of complexity
+					</small>
+					{/* <span
 						class="material-symbols-outlined text-white"
 						data-bs-toggle="tooltip"
 						data-bs-placement="top"
 						data-bs-title="These are test deployments, so have fun with them"
 					>
 						lightbulb
-					</span>
+					</span> */}
 				</div>
 
 				<h4 className="ps-3 mt-5 ms-lg-4  mb-4" style={{ fontWeight: 700, color: "var(--medium)" }}>
@@ -30,7 +32,7 @@ const Projects = () => {
 							<ProjectCard
 								imageUrl={"https://miro.medium.com/v2/resize:fit:1400/1*WQPnsa2Jlv12ZjbQHKUUBA.jpeg"}
 								projectTitle={"CRYPTOCURRENCY EXCHANGE WEB CLIENT"}
-								description={"Web client that permits users deposit, exchange and withdraw currencies"}
+								description={"Web client that permits users deposit, buy, sell, transfer and withdraw cryptocurrencies"}
 								tags={[
 									"Frontend",
 									"Angular",
@@ -43,30 +45,12 @@ const Projects = () => {
 									"Responsive",
 								]}
 								frontend={{ privateCode: true }}
-								info={"The latest project I just worked on for the fintech Limitless Tech"}
+								// info={"Private | The latest project I just worked on for the fintech Limitless Tech"}
+								info={"Private company code"}
+								previewInfo={"This is a production Website"}
+								previewUrl={"https:app.bitkap.africa"}
 							/>
-							<ProjectCard
-								imageUrl={
-									"https://www.loyensloeff.com/contentassets/7ca5076ac555499c84ceedf4553233de/money-2.jpg?width=580&height=387"
-								}
-								projectTitle={"FUND MANAGEMENT APP"}
-								description={
-									"App for management of the funds of individuals who belong to a group. An admin manages the platform and users can deposit, borrow, save, contribute money aswell as ask for financial help."
-								}
-								tags={[
-									"Mobile ",
-									"Frontend",
-									"React native ",
-									"ReST API ",
-									"JWTs ",
-									"Authentication ",
-									"Fintech",
-									"State management",
-								]}
-								frontend={{
-									githubUrl: "https://github.com/valdesguefa/MutuelleMobile",
-								}}
-							/>
+
 							<ProjectCard
 								imageUrl={
 									"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRGy5LZl0OImdEFnHZhEt0RwczU-qbSSCdrg&usqp=CAU"
@@ -87,10 +71,11 @@ const Projects = () => {
 									"Payment processing",
 									"Protected routes",
 								]}
+								info={"This is an initial version of the project. The latest version is private"}
 								frontend={{ githubUrl: "https://github.com/Mewoabi-Joe/SpectrumLab/tree/master/React-frontend" }}
 								backend={{ githubUrl: "https://github.com/Mewoabi-Joe/SpectrumLab/tree/master/NodeJS-backend" }}
 								previewInfo={
-									"You can signup and take a tour as normal user or as the admin who manages the site with email: joe@gmail.com, password: joe123"
+									"This is a test deployment. You can signup and take a tour as normal user or as the admin who manages the site with email: joe@gmail.com, password: joe123"
 								}
 								previewUrl={"https://clinicproject-joe.webdevmobiledev.com"}
 							/>
@@ -113,9 +98,9 @@ const Projects = () => {
 									"API Gateway ",
 								]}
 								backend={{
-									githubUrl:
-										"https://github.com/Mewoabi-Joe/Go-groups-task-3-microservices-in-communication-for-warehouse-management",
+									privateCode: true,
 								}}
+								info={"private"}
 								microServicePreviewUrls={[
 									{ name: "user-service", url: "https://userservice-joe.web.app/swagger-ui/index.html" },
 									{ name: "inventory-service", url: "https://inventoryservice-joe.web.app/swagger-ui/index.html" },
@@ -123,6 +108,31 @@ const Projects = () => {
 								]}
 							/>
 							<ProjectCard
+								info={"This is an initial version of the project. The latest version is private"}
+								imageUrl={
+									"https://www.loyensloeff.com/contentassets/7ca5076ac555499c84ceedf4553233de/money-2.jpg?width=580&height=387"
+								}
+								projectTitle={"FUND MANAGEMENT APP"}
+								description={
+									"App for management of the funds of individuals who belong to a group. An admin manages the platform and users can deposit, borrow, save, contribute money aswell as ask for financial help."
+								}
+								tags={[
+									"Mobile ",
+									"Frontend",
+									"React native ",
+									"ReST API ",
+									"JWTs ",
+									"Authentication ",
+									"Fintech",
+									"State management",
+								]}
+								frontend={{
+									githubUrl: "https://github.com/valdesguefa/MutuelleMobile",
+								}}
+							/>
+
+							<ProjectCard
+								info={"This is an initial version of the project. The latest version is private"}
 								imageUrl={
 									"https://www.smartinsights.com/wp-content/uploads/2016/03/Screen-Shot-2016-02-03-at-11.28.39.png"
 								}

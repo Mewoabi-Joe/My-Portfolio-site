@@ -136,7 +136,7 @@ const ProjectCard = ({
 							class="material-symbols-outlined text-white"
 							data-bs-toggle="tooltip"
 							data-bs-placement="top"
-							data-bs-title="Normally all request go through the API gateway service. For testing purporses I just seperately provided the docs for the different services"
+							data-bs-title="Test deployment. Normally all request go through the API gateway service. For testing purposes I just separately provided the docs for the different services"
 						>
 							lightbulb
 						</span>

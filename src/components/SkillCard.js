@@ -43,7 +43,9 @@ const SkillCard = ({
 								style={{ borderBottomLeftRadius: "1.5rem", borderBottomRightRadius: "1.5rem" }}
 							>
 								{row2Items.map((item, index) => (
-									<span key={index}>{item}</span>
+									<span key={index} style={{ color: item === "space" && "white" }}>
+										{item}
+									</span>
 								))}
 							</li>
 							{row3Items && (

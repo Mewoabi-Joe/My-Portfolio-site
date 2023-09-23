@@ -30,6 +30,10 @@
 	height: 450px !important;
 }
 
+.list-group-item {
+	font-size: small;
+}
+
 @media screen and (width > 900px) {
 	.project-img-and-container {
 		height: 350px !important;
@@ -39,6 +43,10 @@
 @media screen and (width < 600px) {
 	.skill-card {
 		margin: 7px 60px !important;
+	}
+
+	.list-group-item {
+		font-size: 0.75rem;
 	}
 }
 
