@@ -48,7 +48,7 @@ const Projects = () => {
 								// info={"Private | The latest project I just worked on for the fintech Limitless Tech"}
 								info={"Private company code"}
 								previewInfo={"This is a production Website"}
-								previewUrl={"https:app.bitkap.africa"}
+								previewUrl={"https://app.bitkap.africa"}
 							/>
 
 							<ProjectCard
