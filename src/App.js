@@ -8,8 +8,11 @@ import Contact from "./components/Contact";
 import { Modal } from "bootstrap/dist/js/bootstrap.bundle.min.js";
 import MyModal from "./components/MyModal";
 import { Tooltip } from "bootstrap/dist/js/bootstrap.bundle.min.js";
+import useWindowWidth from "./Hooks/UseWindowWidth";
 
 function App() {
+
+
 	document.addEventListener("DOMContentLoaded", function () {
 		// Select all UI DOM elements
 		const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
@@ -23,6 +26,7 @@ function App() {
 
 	const [isSuccess, setIsSuccess] = useState(false);
 	const [message, setMessage] = useState(" ");
+	const width = useWindowWidth();
 
 	const showModal = (isSuccess, message) => {
 		setIsSuccess(isSuccess);
@@ -42,8 +46,8 @@ function App() {
 			<MyModal isSuccess={isSuccess} message={message} />
 			<Navbar />
 			<Home />
-			<About />
-			<Projects />
+			<About width={width} />
+			<Projects width={width} />
 			<Contact showModal={showModal} />
 		</div>
 	);

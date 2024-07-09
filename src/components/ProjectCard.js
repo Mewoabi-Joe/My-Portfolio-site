@@ -1,18 +1,38 @@
 import React from "react";
+import ImageGallery from "./ImageGallery";
 
 const ProjectCard = ({
 	imageUrl,
 	projectTitle,
+	company,
+	mainTechnologies,
 	tags,
+	screenshots,
 	description,
 	frontend,
 	backend,
 	info,
+	role,
 	previewUrl,
 	emptyCard,
-	microServicePreviewUrls,
-	previewInfo,
 }) => {
+	const willShowLightBulb = () => {
+		if (info) {
+			if (frontend) {
+				if (!frontend.privateCode) {
+					return true;
+				}
+			}
+			if (backend) {
+				if (!backend.privateCode) {
+					return true;
+				}
+			}
+			return false;
+		}
+		return false;
+	};
+
 	if (emptyCard) {
 		return (
 			<div
@@ -24,7 +44,7 @@ const ProjectCard = ({
 		return (
 			<div
 				className="skill-card   card border border-secondary p-0"
-				style={{ backgroundColor: "var(--darker)", borderRadius: "1.2rem", overflow: "hidden" }}
+				style={{ backgroundColor: "#111", borderRadius: "1.2rem", overflow: "hidden" }}
 			>
 				<img
 					src={imageUrl}
@@ -42,26 +62,50 @@ const ProjectCard = ({
 					<h5 style={{ color: "white" }} className="card-title fw-bold ">
 						{projectTitle}
 					</h5>
-					<div>
+					<div className="d-flex justify-content-between">
+						{company && (
+							<h6 style={{ color: "white" }} className="card-title fw-bold mb-0 d-none d-lg-block ">
+								{company.toLowerCase() !== "school project" && company.toLowerCase() !== "personal project" && "@"}{" "}
+								{company}
+							</h6>
+						)}
+						<span className="ms-auto">
+							{mainTechnologies.map((tag, index) => (
+								<span key={index} className="badge    main-tech-badge">
+									{tag}
+								</span>
+							))}
+						</span>
+					</div>
+					<div style={{ backgroundColor: "#000", opacity: 0.7, padding: "5px", borderRadius: "7px" }} className="my-2">
+						<small style={{ color: "#fff", zIndex: 3 }}>{description}</small>
+					</div>
+					<div></div>
+					<div className="d-none d-lg-block">
 						{tags.map((tag, index) => (
 							<span key={index} className="badge    my-badge">
 								{tag}
 							</span>
 						))}
 					</div>
-					<div style={{ backgroundColor: "#000", opacity: 0.8, padding: "5px", borderRadius: "7px" }} className="my-2">
-						<small style={{ color: "white", zIndex: 3 }}>{description}</small>
-					</div>
+
+					<div className="text-white my-2 fs-6 fw-bold">Role : {role}</div>
 					{frontend && (
 						<a
 							href={frontend.githubUrl}
 							target="_blank"
 							rel="noreferrer"
 							type="button"
-							class={`btn link btn-light btn-sm  ${frontend.privateCode && "btn-outline-light inactive"}`}
+							class={`btn link transparent btn-sm me-2 ${
+								frontend.privateCode && "btn-outline-light inactive"
+							} d-inline-flex justify-content-center align-items-center`}
+							data-bs-toggle="tooltip"
+							data-bs-placement="top"
+							data-bs-title={info && frontend.privateCode ? info : null}
 							disabled={frontend.privateCode}
 						>
-							Frontend code
+							{frontend.privateCode && <span class="material-symbols-outlined fs-6 me-1 text-danger">hide_source</span>}
+							{frontend.alternateText ? frontend.alternateText : "Frontend Code"}
 						</a>
 					)}
 					{backend && (
@@ -70,18 +114,21 @@ const ProjectCard = ({
 							target="_blank"
 							rel="noreferrer"
 							type="button"
-							class={`btn link btn-light btn-sm  ${frontend && "ms-2"} ${
+							class={`btn link transparent btn-sm ${
 								backend.privateCode && " btn-outline-light inactive"
-							}`}
+							} d-inline-flex justify-content-center align-items-center`}
 							disabled={backend.privateCode}
+							data-bs-toggle="tooltip"
+							data-bs-placement="top"
+							data-bs-title={info && backend.privateCode ? info : null}
 						>
-							Backend code
+							{backend.privateCode && <span class="material-symbols-outlined fs-6 me-1 text-danger">hide_source</span>}
+							<span>Backend code</span>
 						</a>
 					)}
-
-					{info && (
+					{willShowLightBulb() && (
 						<span
-							class="material-symbols-outlined text-white"
+							class="material-symbols-outlined text-white my-tooltip"
 							data-bs-toggle="tooltip"
 							data-bs-placement="top"
 							data-bs-title={info}
@@ -92,56 +139,40 @@ const ProjectCard = ({
 				</div>
 
 				<div className="d-flex" style={{ position: "absolute", bottom: "10px", right: "10px" }}>
+					{!screenshots.hideButton && <ImageGallery screenshots={{ ...screenshots, screenshotsCaption: `${projectTitle} screenshot - ` }} />}
 					{previewUrl && (
-						<a
-							href={previewUrl}
-							target="_blank"
-							rel="noreferrer"
-							class="btn btn-light btn-sm  active-btn  d-flex justify-content-center align-items-center"
-						>
-							<span style={{ marginRight: "5px" }}>Live preview</span>
-							<span class="material-symbols-outlined">magnification_large</span>
-						</a>
-					)}
-					{previewInfo && (
-						<span
-							class="material-symbols-outlined text-white"
-							data-bs-toggle="tooltip"
-							data-bs-placement="top"
-							data-bs-title={previewInfo}
-						>
-							lightbulb
-						</span>
-					)}
-				</div>
-
-				{microServicePreviewUrls && (
-					<div
-						style={{ position: "absolute", bottom: "10px", right: "10px" }}
-						className="d-flex justify-content-end w-100 "
-					>
-						{microServicePreviewUrls.map((service) => (
+						<>
 							<a
-								href={service.url}
+								href={previewUrl.url}
 								target="_blank"
 								rel="noreferrer"
-								class="btn btn-light btn-sm  active-btn  d-flex justify-content-center align-items-center"
-								style={{ marginLeft: "5px", fontSize: "0.7rem", padding: "2px 4px", maxHeight: "32px" }}
+								class={`btn link transparent btn-sm ms-2 ${
+									previewUrl.disable && " inactive "
+								} d-inline-flex justify-content-center align-items-center`}
+								data-bs-toggle="tooltip"
+								data-bs-placement="top"
+								data-bs-title={previewUrl.info && previewUrl.disable ? previewUrl.info : null}
 							>
-								<span style={{ marginRight: "5px" }}>{service.name}</span>
-								<span class="material-symbols-outlined">magnification_large</span>
+								{previewUrl.disable && <span class="material-symbols-outlined fs-6 me-1 text-danger">hide_source</span>}
+
+								<span>Live preview</span>
+								{/* <span style={{ marginRight: "5px" }}>Live preview</span>
+							<span class="material-symbols-outlined">magnification_large</span> */}
 							</a>
-						))}
-						<span
-							class="material-symbols-outlined text-white"
-							data-bs-toggle="tooltip"
-							data-bs-placement="top"
-							data-bs-title="Test deployment. Normally all request go through the API gateway service. For testing purposes I just separately provided the docs for the different services"
-						>
-							lightbulb
-						</span>
-					</div>
-				)}
+
+							{previewUrl.info && !previewUrl.disable && (
+								<span
+									class="material-symbols-outlined text-white my-tooltip"
+									data-bs-toggle="tooltip"
+									data-bs-placement="top"
+									data-bs-title={previewUrl.info}
+								>
+									lightbulb
+								</span>
+							)}
+						</>
+					)}
+				</div>
 			</div>
 		);
 	}
