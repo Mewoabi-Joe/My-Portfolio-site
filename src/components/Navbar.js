@@ -1,12 +1,18 @@
 import React from "react";
 import photo from "../assets/avatarIcon.png";
+import { useNavbarContext } from "../contexts/NavbarContext";
 
 export default function Navbar() {
+
+	// Add the fixed-top class to the navbar when the fixedTop state is true
+	const { fixedTop } = useNavbarContext();
+	console.log('fixedTop', fixedTop)
+
 	return (
 		<nav
 			id="my-navbar"
 			style={{ backgroundColor: "var(--medium)" }}
-			className="navbar navbar-expand-lg fixed-top navbar-light  "
+			className={`navbar navbar-expand-lg ${ fixedTop && ' fixed-top '} navbar-light`}
 		>
 			<div className="container-fluid">
 				<a className="navbar-brand" href="#home">

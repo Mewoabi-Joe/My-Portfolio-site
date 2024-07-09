@@ -12,12 +12,13 @@ const SkillCard = ({
 	theMoreCard,
 	rowsOfMoreCard,
 	emptyCard,
+	scaleDownRow2
 }) => {
 	if (emptyCard) {
 		return <div className="skill-card card border  " style={{ borderWidth: "0px" }}></div>;
 	} else {
 		return (
-			<div className="skill-card card border border-secondary" style={{ borderRadius: "1.5rem" }}>
+			<div className="skill-card card border border-secondary fw-bold" style={{ borderRadius: "1.5rem" }}>
 				<img
 					src={image}
 					className="card-img-top img-fluid border border-light"
@@ -25,9 +26,9 @@ const SkillCard = ({
 					style={{ borderRadius: "1.5rem", height: "200px", width: "500px" }}
 				/>
 				<div className="card-body">
-					<h5 className="card-title text-center fw-bold">{category}</h5>
+					<h5 className="card-title text-center " style={{color: "var(--darker)"}} >{category}</h5>
 				</div>
-				<ul className="list-group list-group-flush">
+				<ul className="list-group list-group-flush" >
 					{!theMoreCard && (
 						<>
 							<li
@@ -35,15 +36,15 @@ const SkillCard = ({
 								style={{ borderBottomLeftRadius: "1.5rem", borderBottomRightRadius: "1.5rem" }}
 							>
 								{row1Items.map((item, index) => (
-									<span key={index}>{item}</span>
+									<span style={{ color: "#555",}} key={index}>{item}</span>
 								))}
 							</li>
 							<li
 								className={`list-group-item d-flex justify-content-${row2Spacing}`}
-								style={{ borderBottomLeftRadius: "1.5rem", borderBottomRightRadius: "1.5rem" }}
+								style={{ borderBottomLeftRadius: "1.5rem", borderBottomRightRadius: "1.5rem"}}
 							>
 								{row2Items.map((item, index) => (
-									<span key={index} style={{ color: item === "space" && "white" }}>
+									<span key={index} style={{ color: item === "space" ? "white" : "#555", transform: scaleDownRow2 && "scale(0.8)"}}>
 										{item}
 									</span>
 								))}
@@ -54,7 +55,7 @@ const SkillCard = ({
 									style={{ borderBottomLeftRadius: "1.5rem", borderBottomRightRadius: "1.5rem" }}
 								>
 									{row3Items.map((item, index) => (
-										<span key={index}>{item}</span>
+										<span style={{ color: "#555",}} key={index}>{item}</span>
 									))}
 								</li>
 							)}
