@@ -12,7 +12,7 @@ const SkillCard = ({
 	theMoreCard,
 	rowsOfMoreCard,
 	emptyCard,
-	scaleDownRow2
+	scaleDownRow3
 }) => {
 	if (emptyCard) {
 		return <div className="skill-card card border  " style={{ borderWidth: "0px" }}></div>;
@@ -44,7 +44,7 @@ const SkillCard = ({
 								style={{ borderBottomLeftRadius: "1.5rem", borderBottomRightRadius: "1.5rem"}}
 							>
 								{row2Items.map((item, index) => (
-									<span key={index} style={{ color: item === "space" ? "white" : "#555", transform: scaleDownRow2 && "scale(0.8)"}}>
+									<span key={index} style={{ color: item === "space" ? "white" : "#555"}}>
 										{item}
 									</span>
 								))}
@@ -55,7 +55,7 @@ const SkillCard = ({
 									style={{ borderBottomLeftRadius: "1.5rem", borderBottomRightRadius: "1.5rem" }}
 								>
 									{row3Items.map((item, index) => (
-										<span style={{ color: "#555",}} key={index}>{item}</span>
+										<span style={{ color: "#555",transform: scaleDownRow3 && "scale(0.8)"}} key={index}>{item}</span>
 									))}
 								</li>
 							)}

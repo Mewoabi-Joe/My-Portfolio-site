@@ -225,8 +225,10 @@ export default function About({width}) {
 								category={"Programming languages & Dev Tools"}
 								row1Items={["JavaScript", "TypeScript", "Java", "C"]}
 								row1Spacing={"between"}
-								row2Items={["Git", "Github", "Docker"]}
+								row2Items={['space']}
 								row2Spacing={"between"}
+								row3Items={["Git", "Github", "Docker"]}
+								row3Spacing={"between"}
 								// row3Items={["Docker", "Kubernetes", "GCP", "Firebase"]}
 								// row3Spacing={"between"}
 							/>
@@ -235,9 +237,11 @@ export default function About({width}) {
 								category={"Frontend & Backend web development"}
 								row1Items={["HTML", "CSS", "SASS", "React", "Angular"]}
 								row1Spacing={"between"}
-								scaleDownRow2={width < 390 ? true : false}
-								row2Items={["Node.js", "Express.js", "NestJS", "Firebase", "Spring boot"]}
-								row2Spacing={"between"}
+								row2Items={["Next.js"]}
+								row2Spacing={"around"}
+								scaleDownRow3={width < 390 ? true : false}
+								row3Items={["Node.js", "Express.js", "NestJS", "Firebase", "Spring boot"]}
+								row3Spacing={"between"}
 								// row3Items={["Angular", "Angular material", "Bootstrap", "Tailwind CSS"]}
 								// row3Spacing={"between"}
 							/>
