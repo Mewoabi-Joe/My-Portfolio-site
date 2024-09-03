@@ -17,22 +17,23 @@ export default function Home() {
 				<div className=" row justify-content-center align-items-center">
 					<div className=" d-block d-md-flex justify-content-end col-md-7 col-lg-6 text-center text-md-start lh-lg">
 						<div className="h1" style={{ fontWeight: 700, wordSpacing: 5 }}>
-							Hi, I am {"  "}
-							<span  style={{ color: "var(--medium)" }}>
+							{/* Hi, I am {"  "} */}
+							<span  style={{ color: "var(--medium)", fontSize: '3.5rem' }}>
 								Mewoabi Joe
 							</span>
 							{"  "}
-							<br />a{"  "}
+							<br />
+							{/* a{"  "} */}
 							<span
-								style={{
-									color: "var(--medium)",
+								// style={{
+								// 	color: "var(--medium)",
 									
-								}}
+								// }}
 							>
 								software engineer
 							</span>
-							<br />
-							and{"  "}
+							{/* <br />
+							&{"  "}
 							<span
 								className="h1"
 								style={{
@@ -41,7 +42,7 @@ export default function Home() {
 								}}
 							>
 								developer
-							</span>
+							</span> */}
 							<div className="my-4" style={{ width: "100%" }}>
 								<a style={{ width: "50%" }} href="#about" class="btn btn-outline-light btn-lg   ">
 									My skills

@@ -46,9 +46,9 @@ export default function Navbar() {
 						<a className="nav-link" href="#projects">
 							Projects
 						</a>
-						<a className="nav-link" href="#contact">
+						{/* <a className="nav-link" href="#contact">
 							Contact
-						</a>
+						</a> */}
 					</div>
 				</div>
 			</div>

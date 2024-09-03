@@ -12,6 +12,7 @@ const SkillCard = ({
 	theMoreCard,
 	rowsOfMoreCard,
 	emptyCard,
+	scaleDownRow3,
 	scaleDownRow2
 }) => {
 	if (emptyCard) {
@@ -55,7 +56,7 @@ const SkillCard = ({
 									style={{ borderBottomLeftRadius: "1.5rem", borderBottomRightRadius: "1.5rem" }}
 								>
 									{row3Items.map((item, index) => (
-										<span style={{ color: "#555",}} key={index}>{item}</span>
+										<span style={{ color: "#555",transform: scaleDownRow3 && "scale(0.8)"}} key={index}>{item}</span>
 									))}
 								</li>
 							)}
