@@ -48,7 +48,7 @@ function App() {
 			<Home />
 			<About width={width} />
 			<Projects width={width} />
-			<Contact showModal={showModal} />
+			{/* <Contact showModal={showModal} /> */}
 		</div>
 	);
 }
