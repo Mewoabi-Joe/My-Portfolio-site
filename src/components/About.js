@@ -10,7 +10,7 @@ import others from "../assets/others.svg";
 import soft from "../assets/soft.svg";
 import SkillCard from "./SkillCard";
 
-export default function About({width}) {
+export default function About({ width }) {
 	return (
 		<section id="about" style={{ paddingTop: "6rem", paddingBottom: "6rem", backgroundColor: "#ddd" }}>
 			<div className="container-lg">
@@ -19,12 +19,13 @@ export default function About({width}) {
 						ABOUT ME
 					</h2>
 					<div className="px-sm-2 px-lg-5">
-					<small className="font-weight-bold ">
-						Versatile software engineer excelling across the board with more than 3 years of experience in
-						designing,developing, and deploying web, mobile, and desktop applications. Specialized in full-stack
-						development, particularly adept with <strong>JavaScript</strong>, <strong>TypeScript</strong>,{" "}
-						<strong>Nest.js</strong> <strong>React</strong>, and the <strong>MERN stack</strong>. 🚀
-					</small>
+						<small className="font-weight-bold ">
+							I am software engineer excelling across the board in gathering requirements, designing, developing,
+							testing, deploying, maintaining, and collaborating effectively with cross-functional teams to deliver
+							high-quality software solutions. I Specialize in full-stack development, particularly adept with{" "}
+							<strong>JavaScript</strong>, <strong>TypeScript</strong>, <strong>Nest.js</strong> <strong>React</strong>,
+							and the <strong>MERN stack</strong>. 🚀
+						</small>
 					</div>
 				</div>
 
@@ -222,25 +223,26 @@ export default function About({width}) {
 						<div className=" row row-cols-1 row-cols-sm-2 align-items-start justify-content-center  ">
 							<SkillCard
 								image={others}
-								category={"Programming languages & Dev Tools"}
+								category={"Languages, Dev & Testing Tools"}
 								row1Items={["JavaScript", "TypeScript", "Java", "C"]}
 								row1Spacing={"between"}
-								row2Items={['space']}
+								row2Items={["Git", "GitHub", "Docker"]}
 								row2Spacing={"between"}
-								row3Items={["Git", "Github", "Docker"]}
-								row3Spacing={"between"}
+								row3Items={["Jest", "Cypress"]}
+								row3Spacing={"around"}
 								// row3Items={["Docker", "Kubernetes", "GCP", "Firebase"]}
 								// row3Spacing={"between"}
 							/>
 							<SkillCard
-								image={frontend}
-								category={"Frontend & Backend web development"}
+								image={mobileDesktop}
+								category={"Front, Back, Mobile & Desktop Dev"}
 								row1Items={["HTML", "CSS", "SASS", "React", "Angular"]}
 								row1Spacing={"between"}
-								row2Items={["Next.js"]}
-								row2Spacing={"around"}
+								scaleDownRow2={width < 390 ? true : false}
+								row2Items={["Node.js", "Express.js", "NestJS", "Firebase", "Spring boot"]}
+								row2Spacing={"between"}
 								scaleDownRow3={width < 390 ? true : false}
-								row3Items={["Node.js", "Express.js", "NestJS", "Firebase", "Spring boot"]}
+								row3Items={["React Native", "Flutter", "Electron.js", "JavaFX"]}
 								row3Spacing={"between"}
 								// row3Items={["Angular", "Angular material", "Bootstrap", "Tailwind CSS"]}
 								// row3Spacing={"between"}
@@ -254,11 +256,11 @@ export default function About({width}) {
 								row2Spacing={"around"}
 							/>
 							<SkillCard
-								image={mobileDesktop}
-								category={"Mobile & Desktop app development"}
-								row1Items={["React Native", "Flutter"]}
-								row1Spacing={"around"}
-								row2Items={["Electron.js"]}
+								image={frontend}
+								category={"More technologies and patterns"}
+								row1Items={["REST API", "Microservices", "Event-Driven"]}
+								row1Spacing={"between"}
+								row2Items={["WebSockets", "Apache Kafka"]}
 								row2Spacing={"around"}
 							/>
 

@@ -8,15 +8,18 @@ const Projects = ({width}) => {
 		<section id="projects" style={{ paddingTop: "6rem", paddingBottom: "6rem", backgroundColor: "var(--darkest)" }}>
 			<div className="container-lg">
 				<div className="text-center mb-5">
-					<h2 className="display-4" style={{ fontWeight: 900, color: "var(--medium)" }}>
-						MY PROJECTS
+					<h2 className="display-4" style={{ color: "var(--medium)" }}>
+						<span style={{ fontWeight: 900}}>MY PROJECTS </span>
+						<span style={{fontSize: '1rem', fontWeight: 'bold'}}> (2018 - 2024)</span>
 					</h2>
 					<small style={{ color: "#bbb" }}>
-						Some of my projects, including source code for public repositories, screenshots, and links to deployed versions.<span
+						{/* Some of my projects, including source code for public repositories, screenshots, and links to deployed versions. */}
+						Some of my projects with links to the code on github, a few screenshots, and links to preview them live.
+						<span
 									class="material-symbols-outlined text-white my-tooltip fs-6"
 									data-bs-toggle="tooltip"
 									data-bs-placement="top"
-									data-bs-title={"Remember they are all fully responsive 🔥"}
+									data-bs-title={"All these projects including this portfolio site is fully responsive 🔥 so feel free using your mobile device to preview them."}
 								>
 									lightbulb
 								</span>
@@ -31,11 +34,11 @@ const Projects = ({width}) => {
 					</span> */}
 				</div>
 
-				<h4 className="ps-3 mt-5 ms-lg-4  mb-4" style={{ fontWeight: 700, color: "var(--medium)" }}>
-					Current project
-				</h4>
+				{/* <h4 className="ps-3 mt-5 ms-lg-4  mb-4" style={{ fontWeight: 700, color: "var(--medium)" }}>
+					My Most Recent Project
+				</h4> */}
 
-				<div className="row justify-content-center" style={{ paddingLeft: 12, paddingRight: 12 }}>
+				{/* <div className="row justify-content-center" style={{ paddingLeft: 12, paddingRight: 12 }}>
 					<div className="col-md-12 col-lg-11 ">
 						<div className=" row row-cols-1 row-cols-sm-2 align-items-end justify-content-center  ">
 							<ProjectCard
@@ -65,10 +68,10 @@ const Projects = ({width}) => {
 							<ProjectCard emptyCard={true} />
 						</div>
 					</div>
-				</div>
+				</div> */}
 
 				<h4 className="ps-3 mt-5 ms-lg-4  mb-4" style={{ fontWeight: 700, color: "var(--medium)" }}>
-					Freelance projects
+					Projects for companies 
 				</h4>
 
 				<div className="row justify-content-center" style={{ paddingLeft: 12, paddingRight: 12 }}>
@@ -94,7 +97,9 @@ const Projects = ({width}) => {
 								frontend={{  privateCode: true }}
 								backend={{privateCode: true }}
 								info={'Private'}
-								previewUrl={{ url: "https://shypto.web.app/", info: "This is a test deployment of early work. Feel free taking a tour, you can try signing up if you wish."}}
+								previewUrl={{ url: "https://shypto.web.app/"
+									// , info: "This is a test deployment of early work. Feel free taking a tour, you can try signing up if you wish."
+								}}
 								screenshots={{imageFolderName: 'b2bsourcing'}}
 							/>
 							<ProjectCard
@@ -115,10 +120,13 @@ const Projects = ({width}) => {
 									"Payment processing",
 								]}
 								role={"Full-stack Developer"}
-								info={"This is an early version of the project. The latest code is private"}
+								// info={"This is an early version of the project. The latest code is private"}
 								frontend={{ githubUrl: "https://github.com/Mewoabi-Joe/SpectrumLab/tree/master/React-frontend" }}
 								backend={{ githubUrl: "https://github.com/Mewoabi-Joe/SpectrumLab/tree/master/NodeJS-backend" }}
-								previewUrl={{ url: "https://clinic-d45d7.web.app", info: "This is a test deployment of early work, feel free taking a tour. You can signup with as a normal user or admin. For admin access use credentials: email: joe@gmail.com, password: joe123"}}
+								previewUrl={{ url: "https://clinic-d45d7.web.app"
+									// , info: "This is a test deployment of early work, feel free taking a tour. You can signup with as a normal user or admin. For admin access use credentials: email: joe@gmail.com, password: joe123"
+									, info: "For admin access use credentials: email: joe@gmail.com, password: joe123"
+								}}
 								screenshots={{imageFolderName:'spectrumlabs'}}
 							/>
 							<ProjectCard
@@ -135,7 +143,10 @@ const Projects = ({width}) => {
 								frontend={{ privateCode: true }}
 								role={"Solo Frontend Developer"}
 								info={"Private code"}
-								previewUrl={{url: "https://evergreenbusinessinitiatives.com", info: "The actual website in production"}}
+								previewUrl={{url: "https://evergreenbusinessinitiatives.com"
+									// , info: "The actual website in production"
+									, info: "Actual production site"
+								}}
 								screenshots={{imageFolderName: 'evergreen'}}
 							/>
 
@@ -144,11 +155,11 @@ const Projects = ({width}) => {
 					</div>
 				</div>
 
-				<h4 className="ps-3 mt-5 ms-lg-4  mb-4" style={{ fontWeight: 700, color: "var(--medium)" }}>
+				{/* <h4 className="ps-3 mt-5 ms-lg-4  mb-4" style={{ fontWeight: 700, color: "var(--medium)" }}>
 					Internship projects
-				</h4>
+				</h4> */}
 
-				<div className="row justify-content-center" style={{ paddingLeft: 12, paddingRight: 12 }}>
+				{/* <div className="row justify-content-center" style={{ paddingLeft: 12, paddingRight: 12 }}>
 					<div className="col-md-12 col-lg-11 ">
 						<div className=" row row-cols-1 row-cols-sm-2 align-items-end justify-content-center  ">
 							<ProjectCard
@@ -202,7 +213,7 @@ const Projects = ({width}) => {
 							<ProjectCard emptyCard={true} />
 						</div>
 					</div>
-				</div>
+				</div> */}
 
 				<h4 className="ps-3 mt-5  ms-lg-4  mb-4" style={{ fontWeight: 700, color: "var(--medium)" }}>
 					School projects
